@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function NewsSection() {
   const news = [
     {
       id: 1,
-      title: "新機能リリースのお知らせ",
+      title: "アップデートのお知らせ",
       date: "2024.02.18",
       link: "/news/1",
     },
     {
       id: 2,
-      title: "アプリコンテスト優勝のお知らせ",
+      title: "ハッカソン参加表明！！",
       date: "2024.02.15",
       link: "/news/2",
     },
@@ -23,7 +23,7 @@ export default function NewsSection() {
       date: "2024.02.10",
       link: "/news/3",
     },
-  ]
+  ];
 
   return (
     <section className="py-12">
@@ -35,7 +35,9 @@ export default function NewsSection() {
           viewport={{ once: true }}
           className="bg-gray-100 p-8 rounded-xl shadow-lg"
         >
-          <h2 className="text-2xl font-bold mb-6 text-[var(--primary)]">お知らせ</h2>
+          <h2 className="text-2xl font-bold mb-6 text-[var(--primary)]">
+            お知らせ
+          </h2>
           <div className="space-y-4">
             {news.map((item, index) => (
               <motion.div
@@ -58,6 +60,5 @@ export default function NewsSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
-
