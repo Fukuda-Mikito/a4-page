@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
 import NewsSection from "@/components/NewsSection";
 import MissionSection from "@/components/MissionSection";
+import DepartmentSection from "@/components/DepartmentSection";
 import ProductSection from "@/components/ProductSection";
 import Footer from "@/components/Footer";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -11,15 +11,8 @@ export default function Home() {
       <Header />
       <NewsSection />
       <MissionSection />
+      <DepartmentSection />
       <ProductSection />
-      <Link
-        href="https://kobe-uni-hub.vercel.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block"
-      >
-        <div className="bg-gray-200 text-center py-3 text-xl">SHINDAI HUB</div>
-      </Link>
       <Footer />
     </main>
   );
