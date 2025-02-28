@@ -7,7 +7,7 @@ export default function NewsSection() {
   const news = [
     {
       id: 1,
-      title: "新機能リリースのお知らせ",
+      title: "アップデートのお知らせ",
       date: "2024.02.18",
       link: "/news/1",
     },
