@@ -3,25 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #1a1a4b;
+  --secondary: #b8d8e8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.link-underline {
+  @apply relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100;
 }
+
