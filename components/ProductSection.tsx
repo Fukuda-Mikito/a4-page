@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function ProductSection() {
   const products = [
@@ -30,7 +30,7 @@ export default function ProductSection() {
       description: "キャンパス内の施設をスマートに案内",
       link: "/products/map",
     },
-  ]
+  ];
 
   return (
     <section className="py-12 bg-[var(--secondary)]">
@@ -51,7 +51,7 @@ export default function ProductSection() {
           viewport={{ once: true }}
         >
           <Link
-            href="https://shindaihub.com"
+            href="https://kobe-uni-hub.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="block hover:opacity-80 transition-opacity duration-300"
@@ -72,7 +72,9 @@ export default function ProductSection() {
             >
               <Link href={product.link}>
                 <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <h3 className="text-xl font-bold mb-2 text-[var(--primary)]">{product.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-[var(--primary)]">
+                    {product.title}
+                  </h3>
                   <p className="text-gray-600 mb-4">{product.description}</p>
                   <div className="flex items-center text-[var(--primary)] font-medium">
                     詳しく見る
@@ -85,6 +87,5 @@ export default function ProductSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
